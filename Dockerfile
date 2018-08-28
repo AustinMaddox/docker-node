@@ -10,9 +10,8 @@ RUN apk add --no-cache \
     make \
     python
 
-# Install Bower and Gulp.
+# Install Gulp.
 RUN npm install -g \
-    bower \
     gulp \
     && chmod -R 755 /usr/local/lib/node_modules
 
