@@ -1,22 +1,4 @@
-FROM node:6-alpine
-
-RUN apk add --no-cache \
-    bash \
-    g++ \
-    gcc \
-    git \
-    libpng \
-    libpng-dev \
-    make \
-    python
-
-# Install Gulp.
-RUN npm install -g \
-    gulp \
-    && chmod -R 755 /usr/local/lib/node_modules
-
-# Define working directory.
-WORKDIR /data
+FROM node:10-alpine
 
 # Install dumb-init.
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ \
