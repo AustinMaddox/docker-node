@@ -1,5 +1,15 @@
 FROM node:10-alpine
 
+RUN apk add --no-cache \
+    bash \
+    g++ \
+    gcc \
+    git \
+    libpng \
+    libpng-dev \
+    make \
+    python
+
 # Install dumb-init.
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ \
     dumb-init
